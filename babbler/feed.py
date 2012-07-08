@@ -58,7 +58,7 @@ class Feed(object):
                     logging.debug("Entry too long: %s" % entry["title"])
                     self.done.add(entry["id"])
                 else:
-                    entry = {"id": entry["id"], "title": entry["title"]}
+                    entry = {"id": entry["id"], "title": entry["title"], "link": entry["link"]}
                     entries.append(entry)
         return entries
 

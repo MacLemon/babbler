@@ -94,7 +94,7 @@ class Bot(object):
                     reply_to = entry["id"]
                 except KeyError:
                     # Feed entry.
-                    tweet = entry["title"]
+                    tweet = "%s %s" % (entry["title"], entry["link"])
                     reply_to = None
                 for tag in tagger.tags(entry["title"]):
                     tag = " #" + tag
